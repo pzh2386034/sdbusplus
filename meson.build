@@ -43,13 +43,6 @@ boost_dep = dependency(
     modules: [ 'coroutine', 'context' ],
 )
 
-if not get_option('examples').disabled()
-  subdir('example')
-endif
-if not get_option('tests').disabled()
-  subdir('test')
-endif
-
 install_subdir(
     'include/sdbusplus',
     install_dir: get_option('includedir'),
